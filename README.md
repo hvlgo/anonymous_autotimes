@@ -1,6 +1,6 @@
 # AutoTimes
 
-The repo is the official implementation for the paper: [AutoTimes: Autoregressive Time Series Forecasters via Large Language Models](https://arxiv.org/abs/2402.02370). It currently includes code implementations for the following tasks:
+The repo is the official implementation for the paper: AutoTimes: Autoregressive Time Series Forecasters via Large Language Models. It currently includes code implementations for the following tasks:
 
 > **[Time Series Forecasting](./scripts/time_series_forecasting/)**: We repurpose large language models as out-of-box time series forecasters on benchmarks including long-term and short-term forecasting.
 
@@ -9,10 +9,6 @@ The repo is the official implementation for the paper: [AutoTimes: Autoregressiv
 > **[In-context Forecasting](./scripts/in_context_forecasting/)**: We propose in-context forecasting for the first time, where instructions in time series itself are available to further enhance forecasting.
 
 > **[Generality on Large Language Models](scripts/method_generality)**: AutoTimes can be easily applied to various kinds of large language models, demonstrating generality and proper scaling behavior.
-
-# Updates
-
-:triangular_flag_on_post: **News** (2024.2) All the scripts for the above tasks in our [paper](https://arxiv.org/pdf/2402.02370.pdf) are available in this repo.
 
 
 ## Showcases
@@ -60,8 +56,7 @@ We provide several showcases of zero-shot and in-context forecasting results.
 pip install -r requirements.txt
 ```
 
-1. Put the datasets [[Google Drive]](https://drive.google.com/file/d/1t7jOkctNJ0rt3VMwZaqmxSuA75TFEo96/view?usp=sharing)
-[[Tsinghua Cloud]](https://cloud.tsinghua.edu.cn/f/849427d3926f4fabbee7/) under the folder ```./dataset/```.
+1. Put the datasets  under the folder ```./dataset/```.
 
 2. Download the large language models from [Hugging Face](https://huggingface.co/) and specify the model path using the `llm_ckp_dir` parameter in scripts.
    * [GPT2](https://huggingface.co/openai-community/gpt2)
@@ -145,32 +140,3 @@ As language models can generally give more accurate answers with a longer contex
 
 Despite LLM having a substantial amount of parameters, AutoTimes requires only minimal parameters (**up to 0.1%**) for training, acomplished by a single pair of MLPs for time series tokenization as the plugin of LLMs.
 
-## Training on Custom Data
-
-Tutorials are provided in this [repo](https://github.com/thuml/iTransformer/tree/main/scripts/multivariate_forecasting).
-
-
-## Citation
-
-If you find this repo helpful, please cite our paper. 
-
-```
-@article{liu2024autotimes,
-  title={AutoTimes: Autoregressive Time Series Forecasters via Large Language Models},
-  author={Liu, Yong and Qin, Guo and Huang, Xiangdong and Wang, Jianmin and Long, Mingsheng},
-  journal={arXiv preprint arXiv:2402.02370},
-  year={2024}
-}
-```
-
-## Acknowledgement
-
-We appreciate the following GitHub repos a lot for their valuable code and efforts.
-- Time-Series-Library (https://github.com/thuml/Time-Series-Library)
-- FPT (https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All)
-
-## Contact
-
-If you have any questions or want to use the code, feel free to contact:
-* Yong Liu (liuyong21@mails.tsinghua.edu.cn)
-* Guo Qin (qing20@mails.tsinghua.edu.cn)
