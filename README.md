@@ -6,6 +6,10 @@ You can download the datasets from other repositories like Autoformer.
 
 Large language models can be downloaded from Hugging Face.
 
+   * [GPT2](https://huggingface.co/openai-community/gpt2)
+   * [OPT Family](https://huggingface.co/facebook/opt-125m)
+   * [LLaMA-7B](https://huggingface.co/meta-llama/Llama-2-7b)
+
 ## Usage 
 
 ```
